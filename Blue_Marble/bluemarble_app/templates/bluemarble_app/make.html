@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="5">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>신의 한 수</title>
+    <style>
+      #jb-container {
+        width: 940px;
+        margin: 0px auto;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-header {
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-sidebar-left {
+        width: 900px;
+        padding: 20px;
+
+        margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
+        border: 1px solid #bcbcbc;
+      }
+
+      #jb-content {
+        width: 450px;
+        padding: 20px;
+        margin-bottom: 20px;
+        float: left;
+        border: 1px solid #bcbcbc;
+      }
+
+	  #jb-sidebar-left-down {
+		width: 160px;
+        padding: 20px;
+
+        margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
+        border: 1px solid #bcbcbc;
+	  }
+
+      #jb-sidebar-right {
+        width: 160px;
+        padding: 20px;
+		margin-top : 355px;
+        margin-bottom: 20px;
+        float: right;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-footer {
+        clear: both;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+    </style>
+
+</head>
+<!--
+def test(request):
+  the= request.POST['firstcard']
+-->
+
+<body>
+	<div id="jb-container">
+      <div id="jb-header">
+        <center>
+		<h1 align="center">항공마블</h1>
+      </div>
+      <div id="jb-footer">
+
+		<form align="left" action="/make/ing/{{me.id}}/" method="POST">
+		{%csrf_token%}
+		방 이름 입력
+		<input type="text" name="roomname" style="width: 500px; height:25px" placeholder="-방 이름 입력-"/>
+	    <button type="submit" style="width: 80px; height:30px" > 생성	</button>
+
+		</form>
+      </div>
+    </div>
+
+
+</body>
+<html>

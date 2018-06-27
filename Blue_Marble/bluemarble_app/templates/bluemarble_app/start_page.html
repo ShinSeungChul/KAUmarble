@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>항공마블</title>
+</head>
+<style>
+    #biggest_box {
+        width: 940px;
+        margin: 0px auto;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #image_box {
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #user_name_box {
+        width: 900px;
+        padding: 20px;
+
+        margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
+        border: 1px solid #bcbcbc;
+      }
+      #create_button_box {
+        clear: both;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+</style>
+<body>
+    <div id="biggest_box">
+        <div id="image_box">
+            <center>
+                <h1>항공마블</h1>
+                <img src="https://cdn.apk-cloud.com/detail/screenshot/ffQJiUDBvgQc8Ww6qpt4165lBeTwMckRcUMeylNTswPJ7Qes1-LeMU79ber6REv_Tt8=h900.png" height="300", width="500"/>
+            </center>
+        </div>
+
+        <div id="user_name_box">
+            <form action="ing/" method="POST">
+                {%csrf_token%}
+                <strong>사용자 이름 입력</strong>
+		        <input type="text" name="name" style="width: 700px; height:25px" placeholder="-사용자 이름입력-"/>
+                <p>
+                    <strong>학과</strong>
+		            <select name="major">
+	                    <option value="1">소프트웨어학과</option>
+	                    <option value="2">항공전자정보공학부</option>
+	                    <option value="3">항공우주기계공학부</option>
+                        <option value="4">경영학과</option>
+	                    <option value="5">항공교통물류법학과</option>
+	                    <option value="6">자율전공</option>
+                        <option value="7">항공운항과</option>
+	                    <option value="8">재료공학과</option>
+	                    <option value="9">JAZZING YOU</option>
+                    </select>
+                </p>
+        </div>
+
+        <div id="create_button_box">
+            <center>
+			    <button type="submit" style="width: 80px; height:30px" > 생성 </button>
+		    </center>
+		    </form>
+        </div>
+    </div>
+</body>
+</html>

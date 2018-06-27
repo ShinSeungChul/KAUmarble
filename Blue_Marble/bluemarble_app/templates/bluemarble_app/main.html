@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>room</title>
+    <style>
+      #biggest_box {
+        width: 940px;
+        margin: 0px auto;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #name_box {
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #sidebar_left {
+        width: 900px;
+        padding: 20px;
+
+        margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
+        border: 1px solid #bcbcbc;
+      }
+
+      #button_box {
+        clear: both;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+    </style>
+</head>
+<body>
+    <div id="biggest_box">
+        <center>
+            <div id="name_box">
+                <h1>항공마블</h1>
+            </div>
+        </center>
+
+        <div id="sidebar_left">
+            {%for room in rooms%}
+            <a href="/room/{{room.id}}/{{me.id}}/">
+		    <div>
+		        {{room.id}}. {{room.name}}. 인원 {{room.full}} /2
+		    </div>
+		    </a>
+		    <!--
+		    dat={'dt' : name}
+	        return render(request, mainh, data)
+		    -->
+		</div>
+            {%endfor%}
+        <div id="button_box">
+            <center>
+		        <a href="/make/{{me.id}}/">
+			    <button style="width: 50px; height:25px"/>
+			    생성
+                </a>
+		    </center>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,611 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>항공마블♥</title>
+    <style>
+   #pjw{
+      width: 43px;
+      height: 43px;
+      position : relative;
+      top:{{indexList1.top1}}px;
+      left:{{indexList1.left1}}px;
+   }
+   #pjwWin{
+       width: 500px;
+       height: 500px;
+       position : relative;
+       top : -70px;
+       left : 0px;
+   }
+   #ssc{
+      width: 40px;
+      height: 40px;
+      position : relative;
+      top:{{indexList2.top2}}px;
+      left:{{indexList2.left2}}px;
+   }
+   #sscWin{
+      width: 500px;
+      height: 500px;
+      position : relative;
+      top:-50px;
+      left:-20px;
+   }
+   #grade1{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 310px;
+      left: 210px;
+   }
+   #grade2{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 310px;
+      left: 90px;
+   }
+   #grade3{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 310px;
+      left: -35px;
+   }
+   #grade5{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 290px;
+      left: -90px;
+   }
+   #grade6{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 200px;
+      left: -125px;
+   }
+   #grade7{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 110px;
+      left: -160px;
+   }
+   #grade9{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 85px;
+      left: -175px;
+   }
+   #grade10{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 85px;
+      left: -125px;
+   }
+   #grade11{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 85px;
+      left: -75px;
+   }
+   #grade13{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 110px;
+      left: -90px;
+   }
+   #grade14{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 165px;
+      left: 320px;
+   }
+   #grade15{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 250px;
+      left: 290px;
+   }
+   #jb-container {
+        width: 940px;
+        margin: 0px auto;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+    #jb-header {
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #bcbcbc;
+    }
+    #jb-player-left {
+        width: 160px;
+        padding: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
+        border: 1px solid #bcbcbc;
+    }
+    #jb-sidebar-left-3 {
+        width: 460px;
+      height: 440px;
+        padding: 2px;
+        margin-bottom: 20px;
+        float: left;
+        border: 1px solid #bcbcbc;
+        background-image: url("https://postfiles.pstatic.net/MjAxODA2MDlfMTQ1/MDAxNTI4NTI5MzkwODIy.Po0f2Htnm7_dfmKMV63eDQQzkBup7vFTZvi-h-9ILp0g.bGmPw0zBvVS-RZENTlpSOZLykapQiAQjWukXkJEziisg.PNG.kangoym/%EA%B2%8C%EC%9E%84%ED%8C%90.png?type=w2");
+        background-size: contain
+    }
+    #jb-player-right {
+      width: 160px;
+        padding: 20px;
+        margin-bottom: 20px;
+        float: right;
+        border: 1px solid #bcbcbc;
+   }
+     #jb-footer {
+        clear: both;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+    }
+    </style>
+</head>
+<body>
+<div id="jb-container">
+    <div id="jb-header">
+      <h1 align="center">항공마블</h1>
+        <p> {{room.name}} </p>
+    </div>
+<container>
+    <div id = "jb-player-left">
+        <t> player1 </t>
+        <t> : {{user1.name}} </t><br>
+        <t> 종족</t>
+      {%if user1.major == '1'%}
+         <t> : 소프트웨어학과 </t><br>
+      {%elif user1.major == '2'%}
+         <t> : 항공전자정보공학부 </t><br>
+      {%elif user1.major == '3'%}
+         <t> : 항공우주기계공학부 </t><br>
+      {%elif user1.major == '4'%}
+         <t> : 경영학과 </t><br>
+      {%elif user1.major == '5'%}
+         <t> : 항공교통물류법학과 </t><br>
+      {%elif user1.major == '6'%}
+         <t> : 자율전공 </t><br>
+      {%elif user1.major == '7'%}
+         <t> : 항공운항과 </t><br>
+      {%elif user1.major == '8'%}
+         <t> : 재료공학과 </t><br>
+      {%elif user1.major == '9'%}
+         <t> : JAZZING YOU </t><br>
+      {%endif%}
+      <t>money </t>
+        <t> : {{user1.money}} </t><br>
+    </div>
+   <div id="jb-sidebar-left-3">
+       <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjMw/MDAxNTI4NTI5MzkxNDU2.yLBd1IWMsWswxaVvbyfw0cimLWs9w2bhoPVWRXWOed0g.pdNddVY7h33wOVNDP0LjODd2Rm8qONl3OFXz9oY0lXAg.PNG.kangoym/%EB%A7%902.png?type=w2" id = "ssc">
+        <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOTkg/MDAxNTI4NTI5MzkxMTg4.RyJkOV3OcehoryAkugnNpI5P4cG-4zwXK1JNDxln7oUg.i0D0zhWtG_laqb0hcEpg7KDLPol74KK8AZ6CHmn0N5wg.PNG.kangoym/%EB%A7%901.png?type=w2" id = "pjw">
+      {%if landList1.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade1">
+      {%endif%}
+      {%if landList1.owner == 1%}
+         {%if landList1.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade1">
+         {%endif%}
+         {%if landList1.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade1">
+         {%endif%}
+         {%if landList1.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade1">
+         {%endif%}
+      {%endif%}
+      {%if landList1.owner == 2%}
+         {%if landList1.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade1">
+         {%endif%}
+         {%if landList1.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade1">
+         {%endif%}
+         {%if landList1.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade1">
+         {%endif%}
+      {%endif%}
+
+      {%if landList2.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade2">
+      {%endif%}
+      {%if landList2.owner == 1%}
+         {%if landList2.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade2">
+         {%endif%}
+         {%if landList2.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade2">
+         {%endif%}
+         {%if landList2.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade2">
+         {%endif%}
+      {%endif%}
+      {%if landList2.owner == 2%}
+         {%if landList2.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade2">
+         {%endif%}
+         {%if landList2.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade2">
+         {%endif%}
+         {%if landList2.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade2">
+         {%endif%}
+      {%endif%}
+
+      {%if landList3.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade3">
+      {%endif%}
+      {%if landList3.owner == 1%}
+         {%if landList3.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade3">
+         {%endif%}
+         {%if landList3.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade3">
+         {%endif%}
+         {%if landList3.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade3">
+         {%endif%}
+      {%endif%}
+      {%if landList3.owner == 2%}
+         {%if landList3.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade3">
+         {%endif%}
+         {%if landList3.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade3">
+         {%endif%}
+         {%if landList3.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade3">
+         {%endif%}
+      {%endif%}
+
+      {%if landList5.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade5">
+      {%endif%}
+      {%if landList5.owner == 1%}
+         {%if landList5.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade5">
+         {%endif%}
+         {%if landList5.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade5">
+         {%endif%}
+         {%if landList5.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade5">
+         {%endif%}
+      {%endif%}
+      {%if landList5.owner == 2%}
+         {%if landList5.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade5">
+         {%endif%}
+         {%if landList5.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade5">
+         {%endif%}
+         {%if landList5.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade5">
+         {%endif%}
+      {%endif%}
+
+      {%if landList6.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade6">
+      {%endif%}
+      {%if landList6.owner == 1%}
+         {%if landList6.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade6">
+         {%endif%}
+         {%if landList6.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade6">
+         {%endif%}
+         {%if landList6.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade6">
+         {%endif%}
+      {%endif%}
+      {%if landList6.owner == 2%}
+         {%if landList6.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade6">
+         {%endif%}
+         {%if landList6.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade6">
+         {%endif%}
+         {%if landList6.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade6">
+         {%endif%}
+      {%endif%}
+
+      {%if landList7.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade7">
+      {%endif%}
+      {%if landList7.owner == 1%}
+         {%if landList7.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade7">
+         {%endif%}
+         {%if landList7.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade7">
+         {%endif%}
+         {%if landList7.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade7">
+         {%endif%}
+      {%endif%}
+      {%if landList7.owner == 2%}
+         {%if landList7.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade7">
+         {%endif%}
+         {%if landList7.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade7">
+         {%endif%}
+         {%if landList7.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade7">
+         {%endif%}
+      {%endif%}
+
+      {%if landList9.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade9">
+      {%endif%}
+      {%if landList9.owner == 1%}
+         {%if landList9.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade9">
+         {%endif%}
+         {%if landList9.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade9">
+         {%endif%}
+         {%if landList9.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade9">
+         {%endif%}
+      {%endif%}
+      {%if landList9.owner == 2%}
+         {%if landList9.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade9">
+         {%endif%}
+         {%if landList9.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade9">
+         {%endif%}
+         {%if landList9.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade9">
+         {%endif%}
+      {%endif%}
+
+      {%if landList10.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade10">
+      {%endif%}
+      {%if landList10.owner == 1%}
+         {%if landList10.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade10">
+         {%endif%}
+         {%if landList10.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade10">
+         {%endif%}
+         {%if landList10.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade10">
+         {%endif%}
+      {%endif%}
+      {%if landList10.owner == 2%}
+         {%if landList10.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade10">
+         {%endif%}
+         {%if landList10.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade10">
+         {%endif%}
+         {%if landList10.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade10">
+         {%endif%}
+      {%endif%}
+
+      {%if landList11.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade11">
+      {%endif%}
+      {%if landList11.owner == 1%}
+         {%if landList11.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade11">
+         {%endif%}
+         {%if landList11.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade11">
+         {%endif%}
+         {%if landList11.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade11">
+         {%endif%}
+      {%endif%}
+      {%if landList11.owner == 2%}
+         {%if landList11.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade11">
+         {%endif%}
+         {%if landList11.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade11">
+         {%endif%}
+         {%if landList11.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade11">
+         {%endif%}
+      {%endif%}
+
+      {%if landList13.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade13">
+      {%endif%}
+      {%if landList13.owner == 1%}
+         {%if landList13.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade13">
+         {%endif%}
+         {%if landList13.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade13">
+         {%endif%}
+         {%if landList13.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade13">
+         {%endif%}
+      {%endif%}
+      {%if landList13.owner == 2%}
+         {%if landList13.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade13">
+         {%endif%}
+         {%if landList13.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade13">
+         {%endif%}
+         {%if landList13.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade13">
+         {%endif%}
+      {%endif%}
+
+      {%if landList14.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade14">
+      {%endif%}
+      {%if landList14.owner == 1%}
+         {%if landList14.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade14">
+         {%endif%}
+         {%if landList14.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade14">
+         {%endif%}
+         {%if landList14.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade14">
+         {%endif%}
+      {%endif%}
+      {%if landList14.owner == 2%}
+         {%if landList14.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade14">
+         {%endif%}
+         {%if landList14.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade14">
+         {%endif%}
+         {%if landList14.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade14">
+         {%endif%}
+      {%endif%}
+
+      {%if landList15.owner == 0%}
+         <img src = "https://blogfiles.pstatic.net/MjAxODA2MjFfODEg/MDAxNTI5NTg5Mjc1OTIy.K4wuJBvuTuNJXVhv7SMu-atYm62rcuphk2htQgEBopIg.86_f4rZYH9ej5DzHMQchOJD7uXjSkO71rwOtLfYw4Xgg.PNG.kangoym/%EA%B7%B8%EB%A6%BC1.png" id = "grade15">
+      {%endif%}
+      {%if landList15.owner == 1%}
+         {%if landList15.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzcg/MDAxNTI4NTI5Mzg5Mzkw.rAudJthUZ-R8Si7FNLsiN4TzXeGZhX-foyr6xhQQcqcg.REwX_3USXIk1Y-shEoXVEwlQDFTOeYhVIGz1gRhqEfkg.PNG.kangoym/%EA%B2%801.png?type=w2" id = "grade15">
+         {%endif%}
+         {%if landList15.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfOCAg/MDAxNTI4NTI5Mzg5ODEw.5KgXyzdXrCn2V222sVCR_Q1w8JS0jfUc8G1MQNjSZ0Mg.3E9g8Knx1RCU05pHG-pteP-uCV8_cASH68pRWLfXWn4g.PNG.kangoym/%EA%B2%802.png?type=w2" id = "grade15">
+         {%endif%}
+         {%if landList15.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjkw/MDAxNTI4NTI5MzkwNDE4.EKVZAGQUc1EFIkYA3zMlu00ynccWm4cpicltaIrV5ZEg.l35493LV76VkjNgsw9XUXZD-DLrGsCH--LL4ZgxVKnog.PNG.kangoym/%EA%B2%80%EC%9D%80%EB%B3%84.png?type=w2" id = "grade15">
+         {%endif%}
+      {%endif%}
+      {%if landList15.owner == 2%}
+         {%if landList15.grade == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfODEg/MDAxNTI4NTI5MzkyMDM0.z_5do03bUQqmS1KO51x2rYzKk2g4NIcQixDVcUV7pmcg.y_qgVUwf7W7msod5BXcU3rsn87LI8NDKYlTjGqPip9sg.PNG.kangoym/%ED%9D%B01.png?type=w2" id = "grade15">
+         {%endif%}
+         {%if landList15.grade == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTIz/MDAxNTI4NTI5MzkyMzQ2.e8ryXn1tDHp6QsGAqlCcu72BAkY1qRQL8Mnonja4dSkg.M7wGYlR9ytZyRB5oARAAiSbaLsHxiAGEr0KTaNEYokgg.PNG.kangoym/%ED%9D%B02.png?type=w2" id = "grade15">
+         {%endif%}
+         {%if landList15.grade == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjky/MDAxNTI4NTI5MzkxNzM0.aIGd0ZXYOcR57C9lZS9EKHC2_utV8dYS0zojiyLghkwg.MeQcccYJj5mog2j7zT8UCUZd40h5nL8k3_lANbagPikg.PNG.kangoym/%ED%95%98%EC%96%80%EB%B3%84.png?type=w2" id = "grade15">
+         {%endif%}
+      {%endif%}
+
+       {%if bankruptcyTemp == True%}
+            {%if turnTemp == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjMw/MDAxNTI4NTI5MzkxNDU2.yLBd1IWMsWswxaVvbyfw0cimLWs9w2bhoPVWRXWOed0g.pdNddVY7h33wOVNDP0LjODd2Rm8qONl3OFXz9oY0lXAg.PNG.kangoym/%EB%A7%902.png?type=w2" id = "sscWin">
+
+            {%else%}
+              <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjMw/MDAxNTI4NTI5MzkxNDU2.yLBd1IWMsWswxaVvbyfw0cimLWs9w2bhoPVWRXWOed0g.pdNddVY7h33wOVNDP0LjODd2Rm8qONl3OFXz9oY0lXAg.PNG.kangoym/%EB%A7%902.png?type=w2" id = "sscWin">
+        {%endif%}
+       {%endif%}
+    </div>
+    <div id = "jb-player-right">
+        <t> player2 </t>
+        <t> : {{user2.name}} </t><br>
+        <t> 종족</t>
+      {%if user2.major == '1'%}
+         <t> : 소프트웨어학과 </t><br>
+      {%elif user2.major == '2'%}
+         <t> : 항공전자정보공학부 </t><br>
+      {%elif user2.major == '3'%}
+         <t> : 항공우주기계공학부 </t><br>
+      {%elif user2.major == '4'%}
+         <t> : 경영학과 </t><br>
+      {%elif user2.major == '5'%}
+         <t> : 항공교통물류법학과 </t><br>
+      {%elif user2.major == '6'%}
+         <t> : 자율전공 </t><br>
+      {%elif user2.major == '7'%}
+         <t> : 항공운항과 </t><br>
+      {%elif user2.major == '8'%}
+         <t> : 재료공학과 </t><br>
+      {%elif user2.major == '9'%}
+         <t> : JAZZING YOU </t><br>
+      {%endif%}
+        <t> money</t>
+        <t> : {{user2.money}} </t><br>
+    </div>
+</container>
+
+    <div id = "jb-player-right">
+        <form action="game/ing/" method="POST">{%csrf_token%}
+            <button type="submit" style="width: 80px; height:30px" > 돌리기 </button>
+        </form>
+      {%if diceNum == 1%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTU2/MDAxNTI4NTMxNTMwNTEw._2tQSYvwTOx4MsD-eyOSE9YqN8PvMYz_MXr0sTSKZvcg.vlMWXQ9mWk-zGHYr8ZD5FzkH_T71sVAKnBPJR8tu14Eg.PNG.kangoym/1.png?type=w2">
+      {%elif diceNum == 2%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMjM1/MDAxNTI4NTMxNTMwNzk1.FiazVprfOM1hnHx55CK-eq3PIO7ot5uDtXuQD1vtchkg.0ZHyef20S--As7vpY5kt0XkxXXsWbS_7eVh-q-zYegIg.PNG.kangoym/2.png?type=w2">
+      {%elif diceNum == 3%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfNTAg/MDAxNTI4NTMxNTMxMTI2.AY0ejm_si6ZbvUO9wNo8ojaL3Rq03c8L-g-7IWUZHSYg.BU0O5GgJQDQAoMwBYy-3Ll17TqdQk6allXb8PK0yCt8g.PNG.kangoym/3.png?type=w2">
+      {%elif diceNum == 4%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMTY2/MDAxNTI4NTMxNTMxNDIy.POv-ibtkoy9SZvljwS7V__KmWBDHVqmMD20TdQmXwW4g.o6Gcz8_cc1pZJKKo2tvg-0OgcFQ-QSo3660vmLmR04Ag.PNG.kangoym/4.png?type=w2">
+      {%elif diceNum == 5%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfNjkg/MDAxNTI4NTMxNTMxNzMy.gH48U8-lKb1qhR-QFiH29ect83YMHNneAzMqkYk8g-Eg.rPOKVT0UTpvd4MDEr1smOd5QLFeqnt5eP1Db-FvAdDwg.PNG.kangoym/5.png?type=w2">
+      {%elif diceNum == 6%}
+            <img src = "https://postfiles.pstatic.net/MjAxODA2MDlfMzAw/MDAxNTI4NTMxNTMxOTk5.xpbdHTVcBe9dINOMycnsGlcLCWp3vr3n9doJ9hqP27kg.kPvHDSE2R23SjY0Z-6bMabwl04mYj2eJJ5QaU0sy9BMg.PNG.kangoym/6.png?type=w2">
+        {%endif%}
+   </div>
+
+</container>
+
+
+    <div id="jb-footer">
+        <center>
+          {%if turnTemp == 2%}
+            {%if user1.position == 0%}
+               <t>{{str}}</t>
+            {%elif user1.position == 4%}
+               <t>{{str}}</t>
+            {%elif user1.position == 8%}
+               <t>{{str}}</t>
+            {%elif user1.position == 12%}
+               <t>{{str}}(Y/N)</t>
+            {%else%}
+               <t>{{str}}{{priceStr}}</t>
+               <t>(Y/N)</t>
+            {%endif%}
+         {%else%}
+            {%if user2.position == 0%}
+               <t>{{str}}</t>
+            {%elif user2.position == 4%}
+               <t>{{str}}</t>
+            {%elif user2.position == 8%}
+               <t>{{str}}</t>
+            {%elif user2.position == 12%}
+               <t>{{str}}(Y/N)</t>
+            {%else%}
+               <t>{{str}}{{priceStr}}</t>
+               <t>(Y/N)</t>
+            {%endif%}
+         {%endif%}
+        <form action="answer/" method="POST">{%csrf_token%}
+            <input type="text" name="v" style="width: 100px; height:25px"/>
+            <button type="submit" style="width: 80px; height:30px" > Send </button>
+         </form>
+         <form action="" method="POST">{%csrf_token%}
+           <button type="submit" style="width: 80px; height:30px" > check </button>
+         </form>
+      </center>
+      </div>
+</div>
+</div>
+</body>
+</html>

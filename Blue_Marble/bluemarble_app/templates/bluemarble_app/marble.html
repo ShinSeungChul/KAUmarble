@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>항공마블♥</title>
+    <style>
+    #jb-container {
+        width: 940px;
+        margin: 0px auto;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+        #jb-header {
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-player-left {
+        width: 160px;
+        padding: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
+        border: 1px solid #bcbcbc;
+
+      }
+      #jb-sidebar-left-3 {
+        width: 460px;
+		height: 440px;
+        padding: 20px;
+        margin-bottom: 20px;
+        float: left;
+        border: 1px solid #bcbcbc;
+        background-image: url("https://postfiles.pstatic.net/MjAxODA2MDlfMTQ1/MDAxNTI4NTI5MzkwODIy.Po0f2Htnm7_dfmKMV63eDQQzkBup7vFTZvi-h-9ILp0g.bGmPw0zBvVS-RZENTlpSOZLykapQiAQjWukXkJEziisg.PNG.kangoym/%EA%B2%8C%EC%9E%84%ED%8C%90.png?type=w2");
+        background-size: contain
+     }
+      #jb-player-right {
+       width: 160px;
+        padding: 20px;
+        margin-bottom: 20px;
+        float: right;
+        border: 1px solid #bcbcbc;
+
+      }
+
+     #jb-footer {
+        clear: both;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+
+    </style>
+</head>
+<body>
+<div id="jb-container">
+    <div id="jb-header">
+
+       <h1 align="center">항공마블</h1>
+
+        <p> {{room.name}} </p>
+
+    </div>
+<container>
+
+
+
+    <div id = "jb-player-left">
+        <t> player1 </t>
+         <t>  {{room.user1}} </t><br>
+        <t> 종족</t>
+            <t> {{ room.major1 }} </t><br>
+        <t> 승리횟수</t>
+            <t>  {{ room.countOfVictory1 }} </t><br>
+    </div>
+     <div id="jb-sidebar-left-3">
+        </div>
+
+    <div id = "jb-player-right">
+        <t> player2 </t>
+         <t> : {{room.user2}} </t><br>
+        <t> 종족</t>
+            <t>  {{ room.major2 }} </t><br>
+        <t> 승리횟수</t>
+            <t>  {{ room.countOfVictory2 }} </t><br>
+    </div>
+</container>
+
+
+
+    <div id = "jb-player-right">
+        <form action="/room/{{room.id}}/marble/ing/{{me.id}}/" method="POST">{%csrf_token%}
+            <button type="submit" style="width: 80px; height:30px" > 돌리기 </button>
+        </form>
+        <img src = "http://postfiles10.naver.net/MjAxODA2MDlfMTU2/MDAxNTI4NTMxNTMwNTEw._2tQSYvwTOx4MsD-eyOSE9YqN8PvMYz_MXr0sTSKZvcg.vlMWXQ9mWk-zGHYr8ZD5FzkH_T71sVAKnBPJR8tu14Eg.PNG.kangoym/1.png?type=w2">
+    </div>
+
+</container>
+
+
+    <div id="jb-footer">
+        <center>
+			<form action="" method="POST">{%csrf_token%}
+			  <button type="submit" style="width: 80px; height:30px" > check </button>
+			</form>
+		</center>
+      </div>
+</div>
+</body>
+</html>
